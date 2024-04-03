@@ -14,8 +14,9 @@ class State(rx.State):
 
 
 def index() -> rx.Component:
+    # Welcome Page (Index)
     return rx.fragment(
-        rx.color_mode_button(rx.color_mode_icon(), float="right"),
+        rx.color_mode.button(rx.color_mode.icon(), float="right"),
         rx.vstack(
             rx.heading("Welcome to Reflex!", font_size="2em"),
             rx.box("Get started by editing ", rx.code(filename, font_size="1em")),
@@ -32,7 +33,7 @@ def index() -> rx.Component:
                     )
                 },
             ),
-            spacing="1.5em",
+            spacing="1",
             font_size="2em",
             padding_top="10%",
         ),
